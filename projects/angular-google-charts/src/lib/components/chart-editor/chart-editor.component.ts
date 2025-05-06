@@ -10,6 +10,7 @@ import { ChartEditorRef } from './chart-editor-ref';
 
 @Component({
   selector: 'chart-editor',
+  standalone: false,
   template: `<ng-content></ng-content>`,
   host: { class: 'chart-editor' },
   changeDetection: ChangeDetectionStrategy.OnPush

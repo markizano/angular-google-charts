@@ -31,6 +31,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'google-chart',
+  standalone: false,
   template: '',
   styles: [':host { width: fit-content; display: block; }'],
   host: { class: 'google-chart' },

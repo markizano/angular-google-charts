@@ -22,6 +22,7 @@ import { ControlWrapperComponent } from '../control-wrapper/control-wrapper.comp
 
 @Component({
   selector: 'dashboard',
+  standalone: false,
   template: '<ng-content></ng-content>',
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'dashboard',

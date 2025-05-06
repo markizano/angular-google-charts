@@ -19,6 +19,7 @@ import { ChartBase } from '../chart-base/chart-base.component';
 
 @Component({
   selector: 'control-wrapper',
+  standalone: false,
   template: '',
   host: { class: 'control-wrapper' },
   exportAs: 'controlWrapper',

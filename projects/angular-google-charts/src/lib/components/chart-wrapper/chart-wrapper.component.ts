@@ -17,6 +17,7 @@ import { ChartBase } from '../chart-base/chart-base.component';
 
 @Component({
   selector: 'chart-wrapper',
+  standalone: false,
   template: '',
   styles: [':host { width: fit-content; display: block; }'],
   host: { class: 'chart-wrapper' },
@@ -48,7 +49,10 @@ export class ChartWrapperComponent implements ChartBase, OnChanges, OnInit {
   private wrapperReadySubject = new ReplaySubject<google.visualization.ChartWrapper>(1);
   private initialized = false;
 
-  constructor(private element: ElementRef, private scriptLoaderService: ScriptLoaderService) {}
+  constructor(
+    private element: ElementRef,
+    private scriptLoaderService: ScriptLoaderService
+  ) {}
 
   public get chart(): google.visualization.ChartBase | null {
     return this.chartWrapper.getChart();
