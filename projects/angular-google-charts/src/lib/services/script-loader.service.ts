@@ -59,7 +59,7 @@ export class ScriptLoaderService {
           google.charts.load(googleChartsConfig.version!, config);
           google.charts.setOnLoadCallback(() => {
             this.zone.run(() => {
-              observer.next();
+              observer.next(null);
               observer.complete();
             });
           });
